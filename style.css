@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(75deg, #b4e1ff 40%, #9900ff 100% );
+}
+.container{
+    height: 260px;
+    background: #f0f0f0;
+    max-width: 410px;
+    border-radius: 7px;
+    padding: 16px 25px;
+    transition: height 0.5s ease;
+}
+.container.active{
+    height: 530px;
+}
+#title{
+    color: #474747;
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+}
+#text{
+    color: #474747;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5px;
+}
+.container .form{
+    padding: 20px 0 25px;
+}
+.container :where(#input-value,#btn){
+    width: 100%;
+    height: 55px;
+    border:none;
+    outline: none;
+    border-radius: 7px;
+}
+.form #input-value{
+    padding:  0 17px;
+    font-size: 18px;
+    border:  1px solid #b3b3b3;
+}
+.form #btn{
+    color: #f0f0f0;
+    background: #9900ff;
+    margin-top: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    transition:  all 0.5 ease;
+}
+.form #btn:hover{
+    background: #9059b4;
+}
+.container #container-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 33px 0;
+}
+#qr-image {
+    width: 220px;
+    pointer-events: none;
+    height: auto;
+    opacity: 0;
+}
+
+.container.active #qr-image {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1.5s ease;
+}
